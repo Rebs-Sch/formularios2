@@ -10,18 +10,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($nome) || empty($email)) {
  
       echo "Todos os campos são obrigatórios!";
+    }
+      
+    else if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+    echo "Formato de email inválido!";
  
-  } else {
+    } else {
       // Processa os dados (por exemplo, salva no banco de dados)
       echo "tudo certinho";
       echo "Nome: " . htmlspecialchars($nome) . "<br>";
       echo "Email: " . htmlspecialchars($email);
+
+      header("location:obrigado.php");
+      exit();
   }
 
-  if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-    echo "Formato de email inválido!";
- }
-
-header("cool.html");
-exit();
 }
