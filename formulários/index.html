@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+
+   <title>Formulário de Exemplo</title>
+
+</head>
+
+<body>
+
+    <form action="/submit" method="POST">
+        <h3>Cadastre-se</h3>
+
+        <div class="formgroup">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" placeholder="Nome completo..."
+        </div>
+
+        <div class="formgroup">
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" name="data-nascimento" id="data-nascimento">
+        </div>
+
+        <div class="formgroup">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="formgroup">
+            <label>Habilidades:</label>
+
+            <label for="html"></label>
+            <input type="checkbox" id="html" name="habilidades" value="HTML">HTML>
+
+            <label for="css"></label>
+            <input type="checkbox" id="css" name="habilidades" value="CSS">CSS
+
+            <label for="cJS"></label>
+            <input type="checkbox" id="JS" name="habilidades" value="JavaScript">JavaScript
+        </div>
+
+        <div class="formgroup">
+            <label for="pais">País</label>
+
+            <select name="pais" id="pais">
+                <option value="br">Brasil</option>
+                <option value="us">Estados Unidos da América</option>
+                <option value="in">Índia</option>
+                <option value="de">Alemanha</option>
+                <option value="mt">Matelândia</option>
+            </select>
+        </div>
+
+        <div class="formgroup">
+            <label for="cometarios">Comentários:</label><br>
+
+            <textarea name="comentarios" id="comentarios"></textarea>
+        </div>
+
+        <div class="formgroup">
+            <button type="submit">Envinhar</button>
+        </div>
+    </form>
+</body>
+</html>
